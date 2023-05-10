@@ -11,14 +11,14 @@ module.exports = {
   dest: 'src/components-lib/dist',
   targets: [
     'react',
-    'svelte'
-    // 'angular',
-    // 'reactNative',
-    // 'solid',
-    // 'vue3',
-    // 'stencil',
-    // 'qwik',
-    // 'lit'
+    'svelte',
+    'angular',
+    'reactNative',
+    'solid',
+    'vue3',
+    'stencil',
+    'qwik',
+    'lit'
   ],
   options: {
     angular: {
