@@ -16,22 +16,33 @@ export default class Button extends LitElement {
   @property() text: any;
 
   @state() name = "Alex";
+  @state() clicked = 0;
 
   render() {
     return html`
 
-          <div>
-          <input .value=${this.name} @input=${(event) =>
-      (this.name = event.target.value)}
-          />
+          <div >
 
-          <button class="{s.Button}">
-            <span>${this.text}</span>
+        <input  .value=${this.name}  @input=${(event) =>
+      (this.name = event.target.value)}  />
 
-            <span>${this.name}</span>
-          </button>
-        </div>
 
+        <button  class={s.Button}  @click=${(event) => {
+          this.clicked = this.clicked + 1;
+        }} >
+
+        <span >${this.text}</span>
+
+
+        <span >${this.name}</span>
+
+              </button>
+
+
+        <div >Clicked:
+        ${this.clicked}</div>
+
+            </div>
         `;
   }
 }

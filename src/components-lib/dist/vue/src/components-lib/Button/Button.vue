@@ -1,10 +1,14 @@
 <template>
   <div>
     <input :value="name" @input="name = $event.target.value" />
-    <button :class="_classStringToObject(s.Button)">
+    <button
+      @click="clicked = clicked + 1"
+      :class="_classStringToObject(s.Button)"
+    >
       <span>{{ text }}</span>
       <span>{{ name }}</span>
     </button>
+    <div>Clicked: {{ clicked }}</div>
   </div>
 </template>
 
@@ -19,6 +23,7 @@ type Props = {
 
 const props = defineProps<Props>();
 const name = ref("Alex");
+const clicked = ref(0);
 
 function _classStringToObject(str: string) {
   const obj: Record<string, boolean> = {};

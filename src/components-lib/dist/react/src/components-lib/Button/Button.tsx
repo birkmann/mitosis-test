@@ -9,15 +9,27 @@ import s from "./Button.module.scss";
 function Button(props: Props) {
   const [name, setName] = useState(() => "Alex");
 
+  const [clicked, setClicked] = useState(() => 0);
+
   return (
     <div>
       <input value={name} onChange={(event) => setName(event.target.value)} />
 
-      <button className={s.Button}>
+      <button
+        onClick={(event) => {
+          setClicked(clicked + 1);
+        }}
+        className={s.Button}
+      >
         <span>{props.text}</span>
 
         <span>{name}</span>
       </button>
+
+      <div>
+        Clicked:
+        {clicked}
+      </div>
     </div>
   );
 }

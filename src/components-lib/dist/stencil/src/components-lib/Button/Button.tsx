@@ -9,6 +9,7 @@ export default class Button {
   @Prop() text: any;
 
   @State() name = "Alex";
+  @State() clicked = 0;
 
   render() {
     return (
@@ -18,11 +19,21 @@ export default class Button {
           onInput={(event) => (this.name = event.target.value)}
         />
 
-        <button class={s.Button}>
+        <button
+          class={s.Button}
+          onClick={(event) => {
+            this.clicked = this.clicked + 1;
+          }}
+        >
           <span>{this.text}</span>
 
           <span>{this.name}</span>
         </button>
+
+        <div>
+          Clicked:
+          {this.clicked}
+        </div>
       </div>
     );
   }

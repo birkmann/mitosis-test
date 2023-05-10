@@ -15,11 +15,18 @@ import s from "./Button.module.scss";
     <div>
       <input [attr.value]="name" (input)="name = $event.target.value" />
 
-      <button [class]="s.Button">
+      <button
+        (click)="
+          clicked = clicked + 1;
+        "
+        [class]="s.Button"
+      >
         <span>{{text}}</span>
 
         <span>{{name}}</span>
       </button>
+
+      <div>Clicked: {{clicked}}</div>
     </div>
   `,
 })
@@ -29,6 +36,7 @@ export class Button {
   @Input() text: Props["text"];
 
   name = "Alex";
+  clicked = 0;
 }
 
 @NgModule({
