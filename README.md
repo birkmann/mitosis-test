@@ -50,3 +50,6 @@ If you find you need to make extra config to make this work more seamlessly, fee
 ---
 
 ![cover image](https://github.com/basementstudio/next-typescript/raw/main/public/og.png 'We Make Cool Sh*t That Performs')
+
+
+yarn exec mitosis build
