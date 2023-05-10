@@ -15,7 +15,7 @@ type Props = {
 import s from "./Button.module.scss";
 
 function Button(props: Props) {
-  const [name, setName] = useState(() => "Alex");
+  const [name, setName] = useState(() => "fromState");
 
   const [clicked, setClicked] = useState(() => 0);
 
@@ -31,6 +31,8 @@ function Button(props: Props) {
         <View>
           <Text>{props.text}</Text>
         </View>
+
+        <View />
 
         <View>
           <Text>{name}</Text>

@@ -9,7 +9,7 @@
 
   export let text: Props["text"];
 
-  let name = "Alex";
+  let name = "fromState";
   let clicked = 0;
 </script>
 
@@ -22,6 +22,7 @@
     class={s.Button}
   >
     <span>{text}</span>
+    <br />
     <span>{name}</span>
   </button>
   <div>Clicked: {clicked}</div>

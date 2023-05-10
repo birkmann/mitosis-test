@@ -7,7 +7,7 @@ type Props = {
 import s from "./Button.module.scss";
 
 function Button(props: Props) {
-  const [name, setName] = createSignal("Alex");
+  const [name, setName] = createSignal("fromState");
 
   const [clicked, setClicked] = createSignal(0);
 
@@ -21,6 +21,7 @@ function Button(props: Props) {
         }}
       >
         <span>{props.text}</span>
+        <br />
         <span>{name()}</span>
       </button>
       <div>

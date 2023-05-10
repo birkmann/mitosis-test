@@ -7,7 +7,7 @@ type Props = {
 }
 
 export default function Button(props: Props) {
-  const [name, setName] = useState('Alex')
+  const [name, setName] = useState('fromState')
   const [clicked, setClicked] = useState(0)
 
   return (
@@ -20,6 +20,7 @@ export default function Button(props: Props) {
         }}
       >
         <span>{props.text}</span>
+        <br />
         <span>{name}</span>
       </button>
       <div>Clicked: {clicked}</div>

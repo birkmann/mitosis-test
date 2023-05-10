@@ -6,7 +6,7 @@ type Props = {
   text: string;
 };
 export const Button = component$((props: Props) => {
-  const state = useStore<any>({ clicked: 0, name: "Alex" });
+  const state = useStore<any>({ clicked: 0, name: "fromState" });
 
   return (
     <div>
@@ -21,6 +21,7 @@ export const Button = component$((props: Props) => {
         class={s.Button}
       >
         <span>{props.text}</span>
+        <br />
         <span>{state.name}</span>
       </button>
       <div>Clicked: {state.clicked}</div>

@@ -15,7 +15,7 @@ export default class Button extends LitElement {
 
   @property() text: any;
 
-  @state() name = "Alex";
+  @state() name = "fromState";
   @state() clicked = 0;
 
   render() {
@@ -32,6 +32,9 @@ export default class Button extends LitElement {
         }} >
 
         <span >${this.text}</span>
+
+
+        <br  />
 
 
         <span >${this.name}</span>

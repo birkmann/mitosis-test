@@ -23,6 +23,8 @@ import s from "./Button.module.scss";
       >
         <span>{{text}}</span>
 
+        <br />
+
         <span>{{name}}</span>
       </button>
 
@@ -35,7 +37,7 @@ export class Button {
 
   @Input() text: Props["text"];
 
-  name = "Alex";
+  name = "fromState";
   clicked = 0;
 }
 

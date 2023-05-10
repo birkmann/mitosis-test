@@ -8,7 +8,7 @@ import { Component, Prop, h, State, Fragment } from "@stencil/core";
 export default class Button {
   @Prop() text: any;
 
-  @State() name = "Alex";
+  @State() name = "fromState";
   @State() clicked = 0;
 
   render() {
@@ -26,6 +26,8 @@ export default class Button {
           }}
         >
           <span>{this.text}</span>
+
+          <br />
 
           <span>{this.name}</span>
         </button>

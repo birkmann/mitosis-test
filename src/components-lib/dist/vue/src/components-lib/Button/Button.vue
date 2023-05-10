@@ -6,6 +6,7 @@
       :class="_classStringToObject(s.Button)"
     >
       <span>{{ text }}</span>
+      <br />
       <span>{{ name }}</span>
     </button>
     <div>Clicked: {{ clicked }}</div>
@@ -22,7 +23,7 @@ type Props = {
 };
 
 const props = defineProps<Props>();
-const name = ref("Alex");
+const name = ref("fromState");
 const clicked = ref(0);
 
 function _classStringToObject(str: string) {

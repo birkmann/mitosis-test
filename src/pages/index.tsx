@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <PageLayout>
       <Meta />
-      <Button text="Hello world!" />
+      <Button text="fromProp" />
       <Welcome />
     </PageLayout>
   )
